@@ -1,0 +1,14 @@
+name: event_details
+on:
+  issues:
+    types: [opened, edited, closed]
+jobs:
+  event_details:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print event details
+        run: |
+          echo "Event Type: ${{ toJSON(github.event_name) }}"
+          echo "Action: ${{ toJSON(github.event.action) }}"
+          echo "Issue Title: ${{ toJSON(github.event.issue.title) }}"
+          echo "Issue Body: ${{ toJSON(github.event.issue.body) }}"
