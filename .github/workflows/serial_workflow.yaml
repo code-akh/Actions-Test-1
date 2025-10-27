@@ -1,4 +1,4 @@
-name: deploy_parallel
+name: deploy_serial
 on:
   push:
     branches:

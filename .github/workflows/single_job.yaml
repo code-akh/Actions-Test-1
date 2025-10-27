@@ -1,4 +1,4 @@
-name: deploy_parallel
+name: deploy_single_job
 on:
   push:
     branches:
@@ -19,4 +19,4 @@ jobs:
       - name: Step5 - Build project
         run: npm run build
       - name: Step6 - Deploy project
-        run: "Deploying application..."
+        run: echo "Deploying application..."
